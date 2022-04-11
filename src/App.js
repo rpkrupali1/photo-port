@@ -31,7 +31,7 @@ function App() {
       ></Nav>
       <main>
         <ContactForm></ContactForm>
-        <Gallery></Gallery>
+        <Gallery currentCategory={currentCategory}></Gallery>
         <About> </About>
       </main>
     </div>
