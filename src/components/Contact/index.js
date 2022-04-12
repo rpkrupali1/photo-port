@@ -10,6 +10,11 @@ function ContactForm() {
   const { name, email, message } = formState;
   const [errorMessage, setErrorMessage] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formState);
+  };
+  
   const handleChange = (e) => {
     if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
@@ -30,11 +35,6 @@ function ContactForm() {
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formState);
   };
 
   return (
